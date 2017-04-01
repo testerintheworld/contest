@@ -1,0 +1,11 @@
+
+    <div id="post">
+        <h1>Название статьи</h1>
+        <img src="#" alt="this is image">
+        <div id="st_news">
+            Lool
+        </div>
+        <div id="author">
+            Administration
+        </div>
+    </div>

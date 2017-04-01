@@ -1,0 +1,38 @@
+
+  <style>
+  div#news{
+    width: 300px;
+	border: 1px solid #111;
+	box-shadow:  0 0 10px #333;
+    }
+  </style>
+  <div id="news">
+    <a href="news.php" class="unhref">
+      <div id="news_name">
+        Новости
+      </div>
+    </a>
+    <div id="content">
+      <a href="contest.php" class="unhref">
+        <div id="contest">
+          <div id="upcoming_contest"> Близжайшие соревнования </div>
+          <br>
+          Server contest
+          <br>
+          <a href="contest.php">
+            Зарегистрироваться
+          </a>
+        </div>
+      </a>
+      <div id="one_new">
+        <header>Название новости</header>
+        Это одна новость
+        <img class="news" src="#" alt="It's picture">
+        <a href="news.php">
+          <div id="href_news">
+            Подробнее...
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>

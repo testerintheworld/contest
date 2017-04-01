@@ -1,0 +1,65 @@
+<script>
+    function changeClass() {
+        $(this).prev().toggleClass('active')
+    }
+    $(function(){
+        $('#contact').hover(function(){
+            $('#settcontact').slideToggle('fast', changeClass);
+            },
+            function(){
+            $('#settcontact').slideToggle('fast', changeClass);
+        });
+    });
+    $('#settcontact').width($('name').width())
+</script>
+<div id="head">
+  <div id="title">
+    <a href="index.php" style="margin-left: 11px;">
+      <div id="logotype">
+        Logotype
+      </div>
+    </a>
+    <div id="menu">
+      <a href="index.php">
+        <div id="one_block">
+          Главная
+        </div>
+      </a>
+      <a href="contest.php">
+        <div id="one_block">
+          Соревнования
+        </div>
+      </a>
+      <a href="groups.php">
+        <div id="one_block">
+          Группы
+        </div>
+      </a>
+      <a href="train.php">
+        <div id="one_block">
+          Тренировки
+        </div>
+      </a>
+      <a href="news.php">
+        <div id="one_block">
+          Новости
+        </div>
+      </a>
+      <a href="about.php">
+        <div id="one_block">
+          О проекте
+        </div>
+      </a>
+    </div>
+      <a onclick="" class="contact">
+        <div id="contact">
+            <div id="name">
+                Guest
+            </div>
+            <div id="settcontact" style="display: none;">
+                It's setting
+            </div>
+        </div> 
+      </a>
+  </div>
+</div> 
