@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> Главная | Project</title>
+	<title> О проекте | Project</title>
 <style>
 </style>
 <script src="assest/js/jquery-3.2.0.min.js"></script>
@@ -17,12 +17,12 @@
 <div id="body">
   <div id="general_content">  
   
-    
-    <?php 
-    $id = 3;
-    include("text_news");
-    ?>
-
+    <div id="post">
+      <h1>Project</h1>
+      <div id="st_news">
+        <a href="contest.webutu.com">Проект</a> - онлайн система тестирования для проведения различных типов олимпиад по программированию
+      </div>
+    </div>
 
   </div>
   <?php

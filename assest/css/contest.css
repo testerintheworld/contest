@@ -3,3 +3,12 @@ div#body_contest{
 	padding: 15px;
 	border: 1px solid #333;
 }
+td{
+	text-align: center;
+}
+td.name{
+	color: darkred;
+}
+td.author{
+	color: black;
+}/start/durability/default

@@ -1,7 +1,16 @@
 <html>
 <head>
 	<title>Соревнования | Project</title>
-<style>
+<?php include("nearContest"); ?>
+<style type="text/css">
+   table{
+    border-collapse: collapse;
+    width: 100%;
+   }
+   td, th {
+    padding: 3px;
+    border: 2px solid black; 
+   }
 </style>
 <script src="assest/js/jquery-3.2.0.min.js"></script>
 <script>
@@ -14,40 +23,46 @@
     <?php include('srchead'); ?>
 <div id="body">
   <div id="general_content">
-    <div id="post">
-        <h1>Название статьи</h1>
-        <img src="#" alt="this is image">
-        <div id="st_news">
-            Lool
-        </div>
-        <div id="author">
-            It's author
-        </div>
-    </div>
+<table>
+<tbody>
+    <tr>
+        <td class="default">
+            Название
+        </td>
+        <td class="default">
+            Авторы
+        </td>
+        <td class="default">
+            Начало
+        </td>
+        <td class="default">
+            Длительность
+        </td>        
+        <td class="default">
+            &nbsp;
+        </td>
+    </tr>
+    <?php 
+    $count  = count($array);
+    for ($i = 0; $i < $count; $i++) {
+        echo("<tr>");
+        echo("<td class=\"name\">".$array[$i]['title']."</td>");
+        echo("<td class=\"author\">".$array[$i]['author']."</td>");
+        echo("<td class=\"start\">".$array[$i]['start']."</td>");
+        echo("<td class=\"durability\">".$array[$i]['durability']."</td>");
+        echo("<td class=\"default\">х".$array[$i]['regpeople']." Зарегистрировано<br><a href=\"regcontest.php?id=\"".$array[$i]['id'].">Зарегистрироваться</a></td>");
+        echo("</tr>");
+    }
+    ?>
+    </tr>
+</tbody>
+</table>
   </div>
     <?php
         include('srcnews');
     ?>
 </div>
-<footer>
-    <div id="left_footer">
-        <div id="one_footer"><a href="#" class="footer">Bug-tracker</a></div>
-        <div id="one_footer"><a href="#" class="footer"></a></div>
-        <div id="one_footer"><a href="#" class="footer">Помощь</a></div>
-    </div>
-    <div id="center_footer">
-        <div id="one_footer"><a href="#" class="footer">Rules</a></div>
-        <div id="one_footer"><a href="#" class="footer">About project</a></div>
-        <div id="one_footer"><a href="#" class="footer">Contact</a></div>
-    </div>
-    <div id="right_footer">
-        <a class="name_footer">Язык</a>
-        <div id="one_footer"><a href="#" class="footer">English</a></div>
-        <div id="one_footer"><a href="#" class="footer">Русский</a></div>
-    </div>
-</footer>
-<div id="footer">
-    &copy; <a class="footer" href="about">Project</a> | All rights reserved
-</div>
+    <?php include("srcfooter");
+    ?>
 </body>
 </html>

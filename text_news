@@ -1,0 +1,68 @@
+<?php 
+$array = array(
+    "k" => "3",
+    array(
+        "title" => "Немного о проекте",
+        "id" => "3",
+        "text" => "Вывод записей основан на цикле for, может быть до какого-нибудь n-ного большого числа (например, до 3 000 000 ))<img alt=\"this is picture\">",
+        "author" => "Admin",
+    ),
+    array(
+        "title" => "Администрация",
+        "id" => "3",
+        "text" => "Разработчик - Илья Канышев",
+        "author" => "Admin",
+    ),
+    array(
+        "title" => "Просто тест записей",
+        "id" => "3",
+        "text" => "Is testing",
+        "author" => "Admin",
+    ),
+);
+if ($id == 3) {
+    for ($i = 0; $i < min(10,$array['k']) ; $i++) {?>
+    <div id="post">
+        <h1>
+            <?php 
+            echo ($array[$i]['title']);?>
+        </h1>
+        <div id="st_news">
+            <?php 
+            echo ($array[$i]['text']);?>
+        </div>
+        <div id="author">
+            <?php 
+            echo ($array[$i]['author']);?>
+        </div>
+    </div>
+    <?php }
+    if ($array['k']>10) {
+        ?>
+<div id="location_block">
+        <?php
+        $e = $array['k'];
+        $c = $e % 10;
+        while ( $c <= $e ) {
+            echo ("<a href=\"".$_SERVER[PHP_SELF].".php?page=".$array[1]."\"".$array[1]['text']);
+        }
+        ?>
+</div>
+        <?php
+    }
+}
+if ($id == 2) {
+?>
+      <div id="one_new">
+        <header>Название новости</header>
+        Это одна новость
+        <img class="news" src="#" alt="It's picture">
+        <a href="news.php">
+          <div id="href_news">
+            Подробнее...
+          </div>
+        </a>
+      </div>
+<?php
+}
+    ?>

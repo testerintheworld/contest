@@ -2,6 +2,10 @@
     function changeClass() {
         $(this).prev().toggleClass('active')
     }
+    function choose(element_id) {
+			var elem = document.getElementById(element_id);
+      elem.style.display = 'block';
+    }
     $(function(){
         $('#contact').hover(function(){
             $('#settcontact').slideToggle('fast', changeClass);
@@ -30,11 +34,11 @@
           Соревнования
         </div>
       </a>
-      <a href="groups.php">
+      <!--a href="groups.php">
         <div id="one_block">
           Группы
         </div>
-      </a>
+      </a-->
       <a href="train.php">
         <div id="one_block">
           Тренировки
@@ -51,15 +55,21 @@
         </div>
       </a>
     </div>
-      <a onclick="" class="contact">
-        <div id="contact">
-            <div id="name">
-                Guest
-            </div>
-            <div id="settcontact" style="display: none;">
-                It's setting
-            </div>
-        </div> 
-      </a>
+    <?php include("srcaccount"); ?>
   </div>
 </div> 
+<div id="singin" style="display: none;">
+  <div id="content_singin">
+    <div id="head_singin">
+      Project
+    </div>
+    <div id="login">
+      <form name="login" action="singin.php" autocomplete="on" method="POST" accept-charset="utf-8">
+        <legend>
+          <fieldset>Nickname: <input type="text" name="login">Password: <input type="password" name="password"></fieldset>
+        </legend>
+        <button id="singin">Войти</button>
+      </form>
+    </div>
+  </div>
+</div>

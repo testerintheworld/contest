@@ -45,55 +45,20 @@
     else {
         ?>
   <div id="general_content">
-    <div id="post">
-        <h1>Новость</h1>
-        <img src="#" alt="this is image">
-        <div id="st_news">
-            It's newssgdhfusagdfgsdkfjgasdkjgfasdhgfjhsgadfjsdgfjkh
-            asdflsdgfjsgdfjs
-            sdfsdfsadfasdfsadf
-            sadfsadfsdfsadf
-            sadfsadfsadfsadf
-            sadfsdaf asfasdf asfsadfsd shfd gfsdf dsuhfugsad ugsaiudgfiusdh ushgaiugdsiufgsdiugiso udiuhfierg isudhiusagdigdiughsadugfiusdg sdushdgu i
-        </div>
-        <div id="author">
-            It's author
-        </div>
-    </div>
-    <div id="post">
-        <h1>Новость</h1>
-        <img src="#" alt="this is image">
-        <div id="st_news">
-            It's news
-        </div>
-        <div id="author">
-            It's author
-        </div>
-    </div>
+  
+
+  <?php 
+  $id = 3;
+  include("text_news");
+  ?>
+
+
   </div>
     <?php } 
     include('srcnews');
     ?>
 </div>
-<footer>
-    <div id="left_footer">
-        <div id="one_footer"><a href="#" class="footer">Bug-tracker</a></div>
-        <div id="one_footer"><a href="#" class="footer"></a></div>
-        <div id="one_footer"><a href="#" class="footer">Помощь</a></div>
-    </div>
-    <div id="center_footer">
-        <div id="one_footer"><a href="#" class="footer">Rules</a></div>
-        <div id="one_footer"><a href="#" class="footer">About project</a></div>
-        <div id="one_footer"><a href="#" class="footer">Contact</a></div>
-    </div>
-    <div id="right_footer">
-        <a class="name_footer">Язык</a>
-        <div id="one_footer"><a href="#" class="footer">English</a></div>
-        <div id="one_footer"><a href="#" class="footer">Русский</a></div>
-    </div>
-</footer>
-<div id="footer">
-    &copy; <a class="footer" href="about">Project</a> | All rights reserved
-</div>
+    <?php include("srcfooter");
+    ?>
 </body>
 </html>
