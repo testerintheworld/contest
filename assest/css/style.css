@@ -19,7 +19,7 @@ div{
 	display: inline-block;
 }
 div#head div#title{
-    width: calc( 100% - 200px );
+    width: 1154px;
 }
 a[onclick]{
     cursor: pointer;
@@ -38,6 +38,30 @@ div#name{
     box-shadow: 3px 3px 19px 5px #222, inset 0px 0px 9px 2px #333;
     border: 1px solid #333;
     border-radius: 5px;
+}
+div#head div#ip{
+	float: right;
+	background: #eee;
+	padding: 9px;
+	border-radius: 8px;
+	box-shadow: 3px 3px 19px 5px #111, inset 0px 0px 9px 2px #333;
+	margin-left: 15px;
+}
+div#location_block{
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+div#location_block div#pageNews{
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 2px;
+	margin: 3px;
+	color: black;
+	box-shadow: 2px 4px 10px #999;
+	border: 1px solid #333;
+	border-radius: 20px;
 }
 div#name.active{
     box-shadow: inset 0 0 6px 3px #222;
@@ -72,7 +96,7 @@ div#head div#title{
 	padding-right: calc( 50% - 586px );
 }
 div#body{
-	margin-top: 92px;
+	margin-top: 50px;
 }
 div#logotype{
 	padding: 7px;
@@ -84,8 +108,8 @@ div#logotype{
 div#head{
     min-width: 1196px;
 }
-div#head div#title{
-    max-width: 1142px;
+div#head a[href]{
+	color: black;
 }
 div#head a{
 	text-decoration: none;
@@ -137,7 +161,7 @@ div#body h1{
 img{
 	width: calc( 100% - 30px );
 	margin: 15px;
-	height: 40px;
+	min-height: 40px;
 }
 p{
 	margin-top: 3px;
@@ -204,8 +228,8 @@ div#body div#general_content{
 }
 div#general_content div#post{
 	border: 1px solid #333;
-    width: 100%;
-	padding: 10px;
+    width: calc( 100% - 20px );
+	padding: 10px; 
 	box-shadow: 0 0 20px #333;
     margin-bottom: 10px;
 }
@@ -344,4 +368,44 @@ div#right_block{
 	float: right;
 	width: 300px;
 	overflow: visible;
+}
+div#slide_menu{
+	display: none;
+	position: absolute;
+	background: white;
+	border: 1px solid #333;
+	margin-left: -14px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+div#one_block:hover div#slide_menu{
+	display: block;
+}
+div#slide_menu div#slide_block{
+	padding: 5px;
+	text-align: center;
+	display: block;
+}
+div#body{
+	cursor: default;
+}
+div#table{
+	border: 1px solid #333;
+    width: calc( 100% - 20px );
+	padding: 10px; 
+	box-shadow: 0 0 20px #333;
+    margin-bottom: 10px;
+}
+legend.inputBlock{
+	width: 100%;
+	margin: 3px;
+}
+.inpTextLogin{
+	float: right;
+}
+div.inpTextLogin{
+	float: right;
+}
+form#lgContest{
+	margin-top: 30%;
 }

@@ -21,10 +21,8 @@ div#right_block{
     <div id="content">
       <a href="contest.php" class="unhref">
         <div id="contest">
-          <div id="upcoming_contest"> Близжайшие соревнования </div>
-          <br>
-          Server contest
-          <br>
+          <div id="upcoming_contest"> Близжайшее соревнование </div>
+          <?php include("leftContest"); ?>
           <a href="contest.php">
             Зарегистрироваться
           </a>
@@ -47,15 +45,21 @@ div#right_block{
 <script type="text/javascript">
   VK.init({apiId: 5996916, onlyWidgets: true});
 </script>
+<?php if (isset($about) != true) { ?>
 <div style="width: 300px; float: right;">
   <a onclick="showHide('#vk_comments')">
-    <button style="text-align:center; width: 100%; margin-top: 10px; margin-bottom: 10px; background: azure; border: 1px solid #234; border-radius: 5px; box-shadow: 0 0 10px #333; padding: 5px;">Оставить отзыв</button>
+    <button style="text-align:center; width: 100%; margin-top: 10px; background: azure; border: 1px solid #234; border-radius: 5px; box-shadow: 0 0 10px #333; padding: 5px;">Оставить отзыв через ВКонтакте</button>
   </a>
-  <div id="vk_comments" style="display: none; box-shadow: 0 0 10px #333;">
+  <div id="vk_comments" style="display: none; box-shadow: 0 0 10px #333; margin-top: 10px;">
 
   </div>
 </div>
 <script type="text/javascript">
-VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
+VK.Widgets.Comments("vk_comments", {limit: 3, attach: "*"});
 </script>
+<script type="text/javascript">
+    $(".fb-comments").slideToggle('fast', changeClass);
+    $("#fd340f28125514").width(300);
+</script>
+<?php } ?>
 </div>

@@ -11,7 +11,7 @@
 }
 	?>
 	<title>
-		<?php  if ($test) {echo("Задача №".$id." | Project");} else {echo("Неверный параметр");};?>
+		<?php  if ($test) {echo("Задача №".$id);} else {echo("Неверный параметр");};?>
 	</title>
 </head>
 <body>
@@ -26,6 +26,7 @@
 		echo("Неверный параметр номера задачи. Через 10 секунд Вы будете перенаправлены на <a href=\"index.php\">Главную</a> страницу");
 	}
 	else {
+	
 ?>
 
 Sorry, but this page not found. Go to the <a href="index.php">main</a> page.

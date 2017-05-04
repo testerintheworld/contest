@@ -1,31 +1,148 @@
-      <a class="contact">
-        <div id="contact">
-            <div id="name">
+      <!a class="contact">
+        <!div id="contact">
+            <!div id="name">
+
+
+
+
+
+            <style>
+div#head div#ip{
+    float: right;
+    background: #eee;
+    padding: 9px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 19px 5px #111, inset 0px 0px 9px 2px #333;
+    margin-left: 15px;
+}
+div#location_block{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+div#location_block div#pageNews{
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+    margin: 3px;
+    color: black;
+    box-shadow: 2px 4px 10px #999;
+    border: 1px solid #333;
+    border-radius: 20px;
+}
+</style>
+
+
+
+
+
+
                 <?php 
-                $ip = $_SERVER['HTTP_USER_AGENT'];
-                $serv = mysqli_connect ("localhost", "id1193618_ilyakanyshev", "kata0109");
-                //$bd_ip_login = mysql_select_db("id1193618_account", $serv);
-                mysqli_close ($serv);
-                if (isset($_GET['id'])) 
-                    {
-                        $nickname = $_GET['id'];
-                        echo($nickname);
-                    }
-                else {
-                ?>
-                Guest
-                <?php } ?>
-            </div>
-            <div id="settcontact" style="display: none;">
-                <?php 
-                if (isset($nickname))
-                    {
-                ?> 
-                This<br> setting<br> in<br> rewriting  
-                    <?php } else { ?>
-                <a onclick="choose('singin')" class="block_login">Log in</a><br>
-                <a href="singup.php" class="block_login">Log up</a>
-                <?php } ?>
-            </div>
-        </div> 
-      </a>
+                $ip = $_SERVER['REMOTE_ADDR'];    //Получение ip пользователя
+
+
+#
+#
+#
+#
+#
+#
+#
+#
+#                #   ##    #      #   #######       #     #   ####
+#                #  #       #    #    #     #      # #    #  #    #
+#                # #         #  #     #     #      # #    #  #    #
+#                ##           ##      #     #     #   #   #  #    #
+#                # #          #       #     #     #   #   ####    #
+#                #  #        #        #     #     #   #   #  #    #
+#                #   #      #         #     #    #     #  #  #    #
+#                #    #    #          #     #    #     #  #   ####
+#
+#
+#
+#                #######   #       #   #######   ########  #     #
+#                #          #     #    #         ##        #     #
+#                #           #   #     #         ##        #     #
+#                #            # #      #         ##        #     #
+#                #######       #       #######   ########  #######
+#                #     #      #        #     #   ##        #     #
+#                #     #     #         #     #   ##        #     #
+#                #     #    #          #     #   ##        #     #
+#                ######    #           ######    ########  #     #
+#                
+#
+#
+#                 #####   ######    ####   #    #  #     #   ####
+#                #     #  #     #  #    #  #    #  #     #  #    #
+#                #        #     #  #    #  #    #  #     #  #    #
+#                #        #     #  #    #  #    #  #     #  #    #
+#                #        ######   #    #   #####  #######  #    #
+#                #        #        #    #       #  #     #  #    #
+#                #        #        #    #       #  #     #  #    #
+#                #     #  #        #    #       #  #     #  #    #
+#                 #####   #         ####        #  #     #   ####
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+
+                #$serv = mysqli_connect('localhost', 'u975060820_ilya', 'ilya2012ilya', 'u975060820_acc');
+                #$bd_ip_login = mysqli_select_db($serv,'ip');
+                #echo $bd_ip_login;
+                #$query ="SELECT * FROM  `ip` WHERE  `ip` LIKE  '".$ip."'";
+                #$result = mysqli_query($bd_ip_login, $query); 
+                #mysqli_close ($serv);
+
+
+                //Определение типа учетной записи по ip (фиксация к месту)
+
+
+                if (($ip == '77.40.2.233')or($ip == '188.187.172.71')or($ip == '188.187.193.136')or($ip == '')or($ip == '')) {$type = 1;}//Администратор
+                    else if (($ip == '')) {$type = 2;} //Модератор
+                    else if (($ip == '')) {$type = 3;} //Редактор
+                    else if (($ip == '')) {$type = 4;} //Свой тестер
+                    else if (($ip == '')) {$type = 5;} //Чужой тестер
+                    else {$type = 6;}                  //Usual user
+
+
+
+                    //Определение ника пользователя и вывод
+
+
+
+
+                #if (isset($_GET['id'])) 
+                #    {
+                #        $nickname = $_GET['id'];
+                #        echo($nickname);
+                #    }
+                #else {
+                #
+                #Guest
+                # } 
+            #</div>
+            #<div id="settcontact" style="display: none;">
+             #   if (isset($nickname))
+              #      {
+               # This<br> setting<br> in<br> rewriting  
+               # <a onclick="choose('singin')" class="block_login">Log in</a><br>
+               # <a href="singup.php" class="block_login">Log up</a>
+               # <?php } 
+
+
+
+
+
+
+                    ?>
+            <!/div>
+        <!/div> 
+      <!/a>

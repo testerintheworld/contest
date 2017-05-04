@@ -1,7 +1,7 @@
 
 <footer>
     <div id="left_footer">
-        <div id="one_footer"><a href="#" class="footer">Bug-tracker</a></div>
+        <div id="one_footer"><a href="bugtracker.php" class="footer">Bug-tracker</a></div>
         <div id="one_footer"><a href="#" class="footer"></a></div>
         <div id="one_footer"><a href="support.php" class="footer">Помощь</a></div>
     </div>
@@ -11,9 +11,6 @@
         <div id="one_footer"><a href="contact.php" class="footer">Contact</a></div>
     </div>
     <div id="right_footer">
-        <!--a class="name_footer">Язык</a>
-        <div id="one_footer"><a href="#" class="footer">English</a></div>
-        <div id="one_footer"><a href="#" class="footer">Русский</a></div-->
     </div>
 </footer>
 <div id="footer">

@@ -1,1 +1,4 @@
 <?php include("nearContest");
+$count = count($array);
+echo("<br>".$array[$count-1]['title']."<br>Начало: ".$array[$count - 1]["start"]."<br>Длительность: ".$array[$count - 1]["durability"]."<br>Зарегистрированно: ".$array[$count - 1]["regpeople"]);
+?>

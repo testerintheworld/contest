@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Соревнования | Project</title>
+	<title>Соревнования </title>
 <?php include("nearContest"); ?>
 <style type="text/css">
    table{
@@ -13,8 +13,30 @@
    }
 </style>
 <script src="assest/js/jquery-3.2.0.min.js"></script>
-<script>
-</script>
+<?php if ($type < 3) {?>
+  <script>
+    allowNewContest = true;
+  function changeClass() {
+    $(this).prev().toggleClass('active')
+  }
+  function newContest() {
+    if (allowNewContest) {
+      allowNewContest = false;
+      $('#newContest').slideToggle('fast', changeClass)
+      $('#table').slideToggle('fast', changeClass)
+      $('#hrefNewContest').slideToggle('fast', changeClass)
+    }
+  }
+  function closeNewContest() {
+    if (allowNewContest == false) {
+      allowNewContest = true;
+      $('#newContest').slideToggle('fast', changeClass)
+      $('#table').slideToggle('fast', changeClass)
+      $('#hrefNewContest').slideToggle('fast', changeClass)
+    }
+  }
+  </script>
+<?php } ?>
 <meta charset="utf-8">
 <link type="text/css" rel="stylesheet" href="assest/css/style.css">
 <link type="text/css" rel="stylesheet" href="assest/css/contest.css">
@@ -23,6 +45,32 @@
     <?php include('srchead'); ?>
 <div id="body">
   <div id="general_content">
+  <?php if ($type < 3) {?> 
+<div id="post">
+  <a onclick="newContest()" id="hrefNewContest" style="display: block;">Новое соревнование</a>
+  <div id="newContest" style="display: none;">
+    <form name="newContestServer" action="newContestServer.php" method="POST">
+      <legend class="inputBlock" style="">
+<?php include("nearContest"); ?>
+        <legend class="inputBlock">
+          Новое соревнование
+        </legend>
+        <legend class="inputBlock">
+          Название:
+          <input type="text" name="name" class="inpTextLogin">
+        </legend>
+        <legend class="inputBlock">
+          Колличество задач:
+          <input type="text" name="countQ" class="inpTextLogin">
+        </legend>
+        <button>Создать</button>
+      </legend>
+    </form>
+    <a onclick="closeNewContest()" id="hrefNewContest" style="display: block;">Вернуться к соревнованиям</a>
+  </div>
+</div>
+    <?php } ?>
+<div id="table">
 <table>
 <tbody>
     <tr>
@@ -32,7 +80,7 @@
         <td class="default">
             Авторы
         </td>
-        <td class="default">
+        <td class="default"> 
             Начало
         </td>
         <td class="default">
@@ -50,13 +98,14 @@
         echo("<td class=\"author\">".$array[$i]['author']."</td>");
         echo("<td class=\"start\">".$array[$i]['start']."</td>");
         echo("<td class=\"durability\">".$array[$i]['durability']."</td>");
-        echo("<td class=\"default\">х".$array[$i]['regpeople']." Зарегистрировано<br><a href=\"regcontest.php?id=\"".$array[$i]['id'].">Зарегистрироваться</a></td>");
+        echo("<td class=\"default\">х".$array[$i]['regpeople']." Зарегистрировано<br><a href=\"regcontest.php?id=".$array[$i]['id']."\">Зарегистрироваться</a></td>");
         echo("</tr>");
     }
     ?>
     </tr>
 </tbody>
 </table>
+</div>
   </div>
     <?php
         include('srcnews');

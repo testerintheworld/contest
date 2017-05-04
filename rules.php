@@ -10,17 +10,19 @@
 <link type="text/css" rel="stylesheet" href="assest/css/style.css">
 </head>
 <body>
+<body>
     <?php
         include('srchead');
     ?>
 <div id="body">
   <div id="general_content">  
-   
-   
-    <?php 
-    $id = 3;
-    include("text_news");
-    ?>
+  
+    <div id="post">
+      <ul>
+        Правила:
+        <li></li>
+      </ul>
+    </div>
 
 
   </div>
