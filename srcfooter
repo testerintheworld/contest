@@ -2,7 +2,6 @@
 <footer>
     <div id="left_footer">
         <div id="one_footer"><a href="bugtracker.php" class="footer">Bug-tracker</a></div>
-        <div id="one_footer"><a href="#" class="footer"></a></div>
         <div id="one_footer"><a href="support.php" class="footer">Помощь</a></div>
     </div>
     <div id="center_footer">
@@ -14,5 +13,5 @@
     </div>
 </footer>
 <div id="footer">
-    &copy; <a class="footer" href="about">Project</a> | All rights reserved
+    &copy; <a class="footer" href="about.php">Project</a> | All rights reserved
 </div>

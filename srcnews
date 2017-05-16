@@ -58,7 +58,6 @@ div#right_block{
 VK.Widgets.Comments("vk_comments", {limit: 3, attach: "*"});
 </script>
 <script type="text/javascript">
-    $(".fb-comments").slideToggle('fast', changeClass);
     $("#fd340f28125514").width(300);
 </script>
 <?php } ?>

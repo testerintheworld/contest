@@ -1,6 +1,8 @@
 <html>
 <head>
 	<title> Тренировки </title>
+<link type="text/css" rel="stylesheet" href="assest/css/style.css">
+<link type="text/css" rel="stylesheet" href="assest/css/contest.css">
 <style>
 </style>
 <script src="assest/js/jquery-3.2.0.min.js"></script>
@@ -11,12 +13,11 @@
    }
    td, th {
     padding: 3px;
+    text-align: left;
     border: 2px solid black; 
    }
 </style>
 <meta charset="utf-8">
-<link type="text/css" rel="stylesheet" href="assest/css/style.css">
-<link type="text/css" rel="stylesheet" href="assest/css/contest.css">
 </head>
 <body>
 <body>
@@ -27,28 +28,58 @@
   <div id="general_content">  
 		<table>
 			<tbody>
-			  <tr>
-			    <td class="default">
+			  <tr style="background: #99D;">
+			    <td class="default" style="text-align: center;">
 			      №
 			    </td>
 			    <td class="default">
 			      Название
 			    </td>
+			    <td class="default" style="text-align: center;">
+			      Уровень
+			    </td>       
+			    <td class="default">
+			      Тип
+			    </td>            
 			    <td class="default">
 			      &nbsp;
 			    </td>       
 			  </tr>
-			  <tr>
-			    <td class="default">
-			      1
-			    </td>
-			    <td class="default">
-			      Бомбеж никиты
-			    </td>
-			    <td class="default">
-			      <a href="problem.php?number=1">Решить</a>
-			    </td>       
-			  </tr>
+			  <?php if ($type < 3) {
+			  	?> 
+			  	<tr>
+				   <td colspan="5">
+			  			<a href="newtask.php" style="display: block;">
+				    		Создать задачу
+				    	</a>
+				   </td>
+			  	</tr>
+			  	<?php
+			  	}
+			  	include("tasks");
+			  	$length = count($task);
+			  	for ($i = $length; $i >= max($length - $length % 50,1); $i--) {
+			  		?>
+			  		<tr>
+			  			<td class="default" style="text-align: center;">
+			  				<?php echo $i; ?>
+			  			</td>
+			  			<td class="default">
+			  				<?php echo $task[$i-1]["title"];?>
+			  			</td>
+			  			<td class="default" style="text-align: center;">
+			  				<?php echo $task[$i-1]["level"];?>
+			  			</td>       
+			    		<td class="default">
+			    		  	<?php echo $task[$i-1]["type"];?>
+			    		</td>     
+			  			<td class="default" style="text-align: center;">
+			  				<a href="problem.php?number=<?php echo $i; ?>">Решить</a>
+			  			</td>
+			  		</tr>
+			  		<?
+			  	}
+			  	?>
 			</tbody>
 		</table>
   </div>

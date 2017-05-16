@@ -1,13 +1,9 @@
 <?php
     include('textnews');
-    #function writeTest($test, $length) {
-    #    $return = '';
-    #    for ($i = 1; $i < $length; $i++){
-    #        $return = $return + $text[$i];
-    #    }
-    #    return $return;
-    #}
+    
     $count  = count($array);
+
+    
 if ($id == 3) {
     if (isset($_GET['page'])){
         $page = $_GET['page'];
@@ -16,19 +12,22 @@ if ($id == 3) {
             <div id="post">
                 <h1>
                     <?php 
-                    echo ($array[$count - $i - 1]['title']);?>
+                        echo ($array[$count - $i - 1]['title']);
+                    ?>
                 </h1>
                 <div id="st_news">
                     <?php 
-                        echo ($array[$count - $i - 1]['text']);?>
+                        echo ($array[$count - $i - 1]['text']);
+                    ?>
                 </div>
                 <div id="author">
                     <?php 
-                    echo ($array[$count - $i - 1]['author']);?>
-               </div>
+                        echo ($array[$count - $i - 1]['author']);
+                    ?>
+                </div>
             </div>
 <?php }
-    } else {echo("<div id=\"post\">Sorry, undefined page. Please, write <a href=\"mailto:ilya.kanyshev@mail.ru\">administration</a></div>");} }
+    } else {echo("<div id=\"post\">Sorry, page not found. Please, write <a href=\"mailto:ilya.kanyshev@mail.ru\">administration</a>.</div>");} }
     else {
     for ($i = $count; $i > max(0,$count - 5) ; $i = $i - 1) {?>
     <div id="post">
@@ -69,10 +68,12 @@ if ($id == 2) {
       <div id="one_new">
         <header>
             <?php 
-            echo ($array[$i-1]['title']);?>
+                echo ($array[$i-1]['title']);
+            ?>
         </header>
             <?php 
-            echo ($array[$i-1]['smartText']);?>
+                echo ($array[$i-1]['smartText']);
+            ?>
         <a href="news.php">
           <div id="href_news">
             Подробнее...

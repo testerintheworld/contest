@@ -1,0 +1,6 @@
+<?php 
+$array = array(
+"Илья, я тебя люблю
+<br>&copy;Даша Иванова",
+"Ты пидр <img src=\"https://pp.userapi.com/c638928/v638928875/289e0/TA_NJaWuD1M.jpg\">",
+);?>

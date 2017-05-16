@@ -16,9 +16,8 @@
     });
     $('#settcontact').width($('name').width())
 </script>
-<div id="head">
-  <div id="title">
-    </a>
+<div id="head" style="margin-left: -4px;">
+  <div id="title" style="width: 1158px;">
     <div id="menu">
       <a href="index.php">
         <div id="one_block">
@@ -50,6 +49,11 @@
               Создать
             </div>
           </a>
+          <a href="stat.php">
+            <div id="slide_block">
+              Статусы
+            </div>
+          </a>
         </div>
       </div>
       </a>
@@ -65,9 +69,6 @@
       </a>
     </div>
     <?php include("srcaccount"); ?>
-  <div id="ip">
-    Your ip: <?php echo $ip; ?>
-  </div>
   <?php if ($type < 6) {
     ?> 
   <div id="ip">

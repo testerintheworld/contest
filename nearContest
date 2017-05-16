@@ -1,20 +1,11 @@
 <?php 
 $array = array(
     array(
-        "title" => "Vk Cup Round 2",
+        "title" => "Local testing contest",
         "author" => "ilyakanyshev",
-        "start" => "24.04.17 18:00",
+        "start" => "24.05.17 18:00",
         "durability" => "2:00",
-        "regpeople" => "2",
+        "regpeople" => "1",
         "id" => "1",
     ),
-    array(
-        "title" => "Test System",
-        "author" => "ilyakanyshev",
-        "start" => "26.04.17 18:00",
-        "durability" => "20:00",
-        "regpeople" => "1",
-        "id" => "2",
-    ),
-);
-?>
+);?>
