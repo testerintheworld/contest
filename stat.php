@@ -67,7 +67,7 @@
             <?php } else {
             ?><tr><?php
             }
-            $resultFile = file_get_contents("stats/".$i."/result.txt");
+            $resultFile = file_get_contents("user_files/".$i."/result.txt");
             ?>
               <td class="default" style="text-align: center;">
                 <?php if (($stat[$i-1]["ip"] === $ip)or($type === 1)) {

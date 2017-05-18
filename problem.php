@@ -105,16 +105,12 @@ if (isset($task[$id-1])) {
 	</div>
 </div>
 <div id="sendResult" style="display: none;">
-<form action="inputfile.php" method="POST">
+<form action="inputfile.php" enctype="multipart/form-data" method="POST">
 	Выберите язык: 
 	<input type="hidden" name="id" value="<?php echo $id;?>">
 	<select name="language">
-		<option selected name="fpc">FPC</option>
-		<option name="python_3">Python 3</option>
-		<option name="python_2.7">Python 2.7</option>
-		<option name="java_7">Java 7</option>
-		<option name="c++_11">C++ 11</option>
-		<option name="c89">C89</option>
+		<option selected>FPC</option>
+		<option>C++ 11</option>
 	</select>
 	<input type="file" name="file">
     <button>Отправить</button>

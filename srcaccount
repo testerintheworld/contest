@@ -1,11 +1,3 @@
-      <!a class="contact">
-        <!div id="contact">
-            <!div id="name">
-
-
-
-
-
             <style>
 div#head div#ip{
     float: right;
@@ -89,18 +81,18 @@ div#location_block div#pageNews{
 
 
 
+
+
+
+                $serv = mysqli_connect('localhost', 'u975060820_ilya', 'ilya2012ilya', 'u975060820_acc');
+                $bd_ip_login = mysqli_select_db($serv,'ip');
+                echo $bd_ip_login;
+                $query ="SELECT * FROM  `ip` WHERE  `ip` LIKE  '".$ip."'";
+                $result = mysqli_query($bd_ip_login, $query); 
+                mysqli_close ($serv);
+
+
 */
-
-
-
-                #$serv = mysqli_connect('localhost', 'u975060820_ilya', 'ilya2012ilya', 'u975060820_acc');
-                #$bd_ip_login = mysqli_select_db($serv,'ip');
-                #echo $bd_ip_login;
-                #$query ="SELECT * FROM  `ip` WHERE  `ip` LIKE  '".$ip."'";
-                #$result = mysqli_query($bd_ip_login, $query); 
-                #mysqli_close ($serv);
-
-
                 //Определение типа учетной записи по ip (фиксация к месту)
 
 

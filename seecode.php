@@ -21,15 +21,17 @@
         settype($i, 'int');
         include("srcStatPos");
         if (($stat[$i-1]["ip"] === $ip)or($type < 3)) {
-          $code = file_get_contents("stats/".$i."/text.txt");
+          $code = file_get_contents("user_files/".$i."/text.txt");
+          $language = file_get_contents("user_files/".$i."/language.txt");
           echo "<h1>Решение задачи. Посылка №".$i."</h1>"; 
-          echo "<pre>".$code."</pre>";
           echo("Задача: <a href=\"problem.php?number=".$stat[$i-1]["task"]."\">".$stat[$i-1]["task"].") ".$task[$stat[$i-1]["task"] - 1]["title"]."</a>"); 
+          echo("<br>Язык программирования: ".$language."<br>");
+          echo "<pre>".$code."</pre>";
         } else {
           echo('<h1 style="margin: 0px; border: 0px;">Ошибка. Недостаточно прав. Просмотр недоступен.</h1>');
         } 
     ?>
-    <a href="stat.php">Вернуться к посылкам</a><br><a href="train.php">Вернуться к задачам</a>
+    <br><a href="stat.php">Вернуться к посылкам</a><br><a href="train.php">Вернуться к задачам</a>
     </div>
   </div>
 </div>

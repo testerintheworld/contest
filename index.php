@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> Главная </title>
+	<title> CodeGround </title>
 <style>
 </style>
 <script src="assest/js/jquery-3.2.0.min.js"></script>

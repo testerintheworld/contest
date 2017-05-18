@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> Support </title>
+	<title> Support page </title>
 <style>
 </style>
 <script src="assest/js/jquery-3.2.0.min.js"></script>
@@ -19,7 +19,7 @@
    
    <div id="post">
      <h1>Support</h1>
-     <p>Здравствуйте, Вы находитесь на странице техподдержки <a href="index.php">CodeGround</a>. </p>
+     <p>Здравствуйте, Вы находитесь на странице техподдержки <a href="index.php">CodeGround</a>. Задайте вопрос администратору с помощью Вашей почты. Писать <a href="mailto://support@codeground.ru">на эту почту</a>.</p>
    </div>
 
   </div>

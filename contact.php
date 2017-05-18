@@ -4,8 +4,7 @@
 <link type="text/css" rel="stylesheet" href="assest/css/style.css">
 <style>
 div#one_person{
-  width: 95%;
-  margin-left: 5%;
+  width: 100%;
 }
 div#one_person h1{
   border: 0px;

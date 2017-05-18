@@ -82,6 +82,7 @@ $_REQUEST=defender_xss($_REQUEST);
             echo ($array[$post-1]['author']);?>
         </div>
     </div>
+  </div>
     <?php
     }else{
         ?> <div id="general_content">
@@ -111,8 +112,9 @@ $_REQUEST=defender_xss($_REQUEST);
 <?php if (($type < 4) and (isset($_GET['page']) === false) and (isset($_GET['id']) === false)) {
     ?> <a onclick="addnews()"><div id="post"><h1 style="border: 0px;padding: 0px; margin: 0px;">Отправить запись</h1></div></a> <?php
 } ?>
-<?php }
-
+<?php } ?> 
+  </div>
+  <?php 
   $id = 3;
   include("text_news");
   ?>
@@ -120,7 +122,6 @@ $_REQUEST=defender_xss($_REQUEST);
     <?php } 
 ?> 
 <?php if (isset($_GET['page']) === false) {?>
-</div>
 <?php } 
     include('srcnews');
     ?>
